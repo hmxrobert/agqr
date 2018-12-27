@@ -1,5 +1,5 @@
 # agqr
-Rec AGQR and Podcast
+Rec AGQR and Podcast  
 まだ動作しない
 
 ## agqr.rb
