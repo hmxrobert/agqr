@@ -3,8 +3,8 @@ Rec AGQR and Podcast
 
 ## agqr.rb
 
-y_benjo氏作成、akahana-1氏改良のスクリプト  
-https://gist.github.com/akahana-1/b728df1543d6537b139754116ed19671
+yagays氏作成、y_benjo氏改良のスクリプト  
+https://gist.github.com/ybenjo/9904543
 をさらにカスタム  
 (LINE Notifyするようにしたぐらい)  
 
@@ -13,4 +13,5 @@ https://gist.github.com/akahana-1/b728df1543d6537b139754116ed19671
 Matchy2氏作
 https://gist.github.com/matchy2/5552631  
 たまったmp3ファイルでPodcastを生成  
-ngnixでWebサービスを公開  
+  
+これらをDockerにまとめたもの
