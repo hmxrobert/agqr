@@ -14,6 +14,7 @@ RUN rc-service nginx start
 ADD agqr.rb /
 ADD makepodcast.rb /
 ADD agqr.sh /
+RUN chmod +x /agqr.sh
 
 EXPOSE 80
 
