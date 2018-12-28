@@ -1,5 +1,3 @@
-#!/opt/rbenv/shims/ruby
-
 require 'time'
 require 'nkf'
 
