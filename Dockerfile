@@ -9,6 +9,7 @@ RUN sed -i 's/#rc_sys=""/rc_sys="lxc"/g' /etc/rc.conf && \
     sed -i 's/hostname $opts/# hostname $opts/g' /etc/init.d/hostname && \
     sed -i 's/mount -t tmpfs/# mount -t tmpfs/g' /lib/rc/sh/init.sh && \
     mkdir /run/openrc && touch /run/openrc/softlevel
+RUN rc-service nginx checkconfig
 RUN rc-service nginx start
 
 ADD agqr.rb /
@@ -21,4 +22,4 @@ EXPOSE 80
 
 VOLUME /mnt/agqr
 
-CMD ["agqr.sh"]
+ENTRYPOINT ["/bin/ash /agqr.sh"]
