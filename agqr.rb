@@ -1,5 +1,3 @@
-#!/opt/rbenv/shims/ruby
-
 # -*- coding: utf-8 -*-
 # record AGQR
 # usage: use with crontab
