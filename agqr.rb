@@ -14,7 +14,8 @@ rtmpdump = '/usr/bin/rtmpdump'
 ffmpeg = '/usr/bin/ffmpeg'
 agqr_stream_url = 'rtmp://fms-base1.mitene.ad.jp/agqr/aandg22'
 
-current = File.dirname(File.expand_path(__FILE__))
+#current = File.dirname(File.expand_path(__FILE__))
+current = "/mnt/agqr"
 
 save_dir = "#{current}/data/"
 Dir.mkdir(save_dir) if !File.exist?(save_dir)
