@@ -7,6 +7,8 @@
 # requirements
 # crontab, ruby >~ 1.9, ffmpeg, rtmpdump
 
+#ARGV[0]にはLINEのアクセストークンをいれる
+
 require 'yaml'
 require 'shellwords'
 
