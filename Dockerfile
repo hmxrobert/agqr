@@ -14,4 +14,4 @@ EXPOSE 80
 
 VOLUME /mnt/agqr
 
-CMD ["/usr/sbin/nginx" "-g" "daemon off;"] 
+CMD /usr/sbin/nginx -g "daemon off;"
