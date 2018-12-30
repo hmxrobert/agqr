@@ -8,9 +8,10 @@ ADD makepodcast.rb /
 ADD agqr.sh /
 ADD schedule.yaml /
 RUN chmod +x /agqr.sh
+RUN mkdir -p /run/nginx
 
 EXPOSE 80
 
 VOLUME /mnt/agqr
 
-CMD ["nginx" "-g" "daemon off;"] 
+CMD ["/usr/sbin/nginx" "-g" "daemon off;"] 
