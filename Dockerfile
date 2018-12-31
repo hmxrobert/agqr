@@ -20,4 +20,4 @@ EXPOSE 80
 VOLUME /mnt/agqr
 
 ENTRYPOINT ["/init.sh"]
-CMD ["localhost:80"]
+CMD ["http://localhost:80/"]
