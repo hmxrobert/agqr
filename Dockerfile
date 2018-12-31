@@ -9,7 +9,6 @@ ADD agqr.rb /
 ADD makepodcast.rb /
 ADD init.sh /
 ADD agqr.sh /
-ADD schedule.yaml /
 
 RUN chmod +x /init.sh && \
     chmod +x /agqr.sh && \
