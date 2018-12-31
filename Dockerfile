@@ -11,13 +11,13 @@ ADD init.sh /
 ADD agqr.sh /
 ADD schedule.yaml /
 
-RUN chmod +x /init.sh
-RUN chmod +x /agqr.sh
-RUN mkdir -p /run/nginx
+RUN chmod +x /init.sh && \
+    chmod +x /agqr.sh && \
+    mkdir -p /run/nginx
 
 EXPOSE 80
 
 VOLUME /mnt/agqr
 
 ENTRYPOINT ["/init.sh"]
-CMD ["http://localhost:80/"]
+CMD ["超A＆G＋", "http://localhost:80/"]
