@@ -3,12 +3,14 @@ MAINTAINER hmxrobert
 
 RUN apk --update --no-cache add ruby nginx rtmpdump ffmpeg tzdata && \
     cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
-    apk del tzdata
+    apk del tzdata && \
+    mkdir /var/www/html
     
 ADD agqr.rb /
 ADD makepodcast.rb /
 ADD init.sh /
 ADD agqr.sh /
+ADD default.conf /etc/nginx/conf.d/
 
 RUN chmod +x /init.sh && \
     chmod +x /agqr.sh && \
