@@ -14,7 +14,8 @@ ADD default.conf /etc/nginx/conf.d/
 
 RUN chmod +x /init.sh && \
     chmod +x /agqr.sh && \
-    mkdir -p /run/nginx
+    mkdir -p /run/nginx && \
+    cp /var/spool/cron/crontabs/root /var/spool/crontabs/root.org
 
 EXPOSE 80
 
