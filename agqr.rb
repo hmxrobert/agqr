@@ -12,7 +12,7 @@ require 'shellwords'
 
 rtmpdump = '/usr/bin/rtmpdump'
 ffmpeg = '/usr/bin/ffmpeg'
-agqr_stream_url = 'rtmp://fms-base1.mitene.ad.jp/agqr/aandg1'
+agqr_stream_url = 'rtmp://fms-base2.mitene.ad.jp/agqr/aandg1'
 
 #current = File.dirname(File.expand_path(__FILE__))
 current = "/mnt/agqr"
