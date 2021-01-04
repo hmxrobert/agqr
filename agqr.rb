@@ -12,7 +12,7 @@ require 'shellwords'
 
 rtmpdump = '/usr/bin/rtmpdump'
 ffmpeg = '/usr/bin/ffmpeg'
-agqr_stream_url = 'rtmp://fms-base2.mitene.ad.jp/agqr/aandg1'
+agqr_stream_url = 'https://www.uniqueradio.jp/agplayer5/hls/mbr-ff.m3u8'
 
 #current = File.dirname(File.expand_path(__FILE__))
 current = "/mnt/agqr"
@@ -81,7 +81,8 @@ schedule.each do |program|
     flv_path = Shellwords.escape("#{save_dir}flv/#{title}.flv")
     
     # record stream
-    rec_command = "#{rtmpdump} -r #{agqr_stream_url} --live -B #{length} -o #{flv_path} >/dev/null 2>&1"
+    # rec_command = "#{rtmpdump} -r #{agqr_stream_url} --live -B #{length} -o #{flv_path} >/dev/null 2>&1"
+    rec_command = "#{ffmpeg} -protocol_whitelist file,http,https,tcp,tls,crypto -i #{agqr_stream_url} -movflags faststart -t #{length} -c copy #{flv_path} >/dev/null 2>&1"
     system rec_command
 
     # encode flv -> m4a
