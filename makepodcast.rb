@@ -1,5 +1,6 @@
 require 'time'
 require 'nkf'
+require 'uri'
 
 abort "Usage:#{$0} PodcastTitle PublicURL FilesDir" if ARGV.length < 3
 
