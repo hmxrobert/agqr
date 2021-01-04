@@ -74,7 +74,7 @@ schedule.each do |program|
 
   is_appropriate_time = (program_start - today).abs < 120
 
-  length = program['length'] * 60 + 10
+  length = program['length'] * 60 + 50
 
   if is_appropriate_wday && is_appropriate_time
     title = (program['title'].to_s + ' (' + today.strftime('%F ') + hstr + ':' + mstr + ':00 ' + today.strftime('%z %Z') + ')') #.gsub(' ','')
