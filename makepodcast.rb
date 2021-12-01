@@ -31,7 +31,7 @@ puts <<EOS
 EOS
 
 files.each do |item|
-  url = location + URI.escape(item['fname']) #encode_www_form_component(item['fname'])
+  url = location + encode_www_form_component(item['fname']) #URI.escape(item['fname']) 
 
   if (/\.mp3$/ =~ item['fname']) then
     mime = 'audio/mp3'
